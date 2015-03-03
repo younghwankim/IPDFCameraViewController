@@ -1,6 +1,9 @@
+
 ![Screenshot](https://raw.githubusercontent.com/mmackh/IPDFCameraViewController/master/mockup.png)
 
 # IPDFCameraViewController
+
+[![Gratipay](https://img.shields.io/gratipay/mmackh.svg)](https://gratipay.com/mmackh/)
 
 Welcome to the spiritual successor of [MAImagePickerController](https://github.com/mmackh/MAImagePickerController-of-InstaPDF), that tries to unite a usable & simple camera component class into a single UIView. Initially written as an essential component of InstaPDF 4.0 for [instapdf.com](https://instapdf.com), it seemed too useful to keep closed source. Plus we're celebrating our 100,000 document upload 🎉🎉🎉
 
