@@ -28,6 +28,7 @@
 @property (nonatomic, strong) AVCaptureStillImageOutput* stillImageOutput;
 
 @property (nonatomic, assign) BOOL forceStop;
+@property (nonatomic, assign) CGSize intrinsicContentSize;
 
 @end
 
@@ -203,8 +204,23 @@
         [_coreImageContext drawImage:image inRect:self.bounds fromRect:[image extent]];
         [_glkView display];
         
+        if(_intrinsicContentSize.width != image.extent.size.width) {
+            self.intrinsicContentSize = image.extent.size;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self invalidateIntrinsicContentSize];
+            });
+        }
+        
         image = nil;
     }
+}
+
+- (CGSize)intrinsicContentSize
+{
+    if(_intrinsicContentSize.width == 0 || _intrinsicContentSize.height == 0) {
+        return CGSizeMake(1, 1); //just enough so rendering doesn't crash
+    }
+    return _intrinsicContentSize;
 }
 
 - (void)enableBorderDetectFrame
