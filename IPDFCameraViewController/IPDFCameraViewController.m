@@ -201,7 +201,7 @@
             [EAGLContext setCurrentContext:_context];
         }
         [_glkView bindDrawable];
-        [_coreImageContext drawImage:image inRect:self.bounds fromRect:[image extent]];
+        [_coreImageContext drawImage:image inRect:self.bounds fromRect:[self cropRectForPreviewImage:image]];
         [_glkView display];
         
         if(_intrinsicContentSize.width != image.extent.size.width) {
@@ -221,6 +221,20 @@
         return CGSizeMake(1, 1); //just enough so rendering doesn't crash
     }
     return _intrinsicContentSize;
+}
+
+- (CGRect)cropRectForPreviewImage:(CIImage *)image
+{
+    CGFloat cropWidth = image.extent.size.width;
+    CGFloat cropHeight = image.extent.size.height;
+    if (image.extent.size.width>image.extent.size.height) {
+        cropWidth = image.extent.size.width;
+        cropHeight = cropWidth*self.bounds.size.height/self.bounds.size.width;
+    }else if (image.extent.size.width<image.extent.size.height) {
+        cropHeight = image.extent.size.height;
+        cropWidth = cropHeight*self.bounds.size.width/self.bounds.size.height;
+    }
+    return CGRectInset(image.extent, (image.extent.size.width-cropWidth)/2, (image.extent.size.height-cropHeight)/2);
 }
 
 - (void)enableBorderDetectFrame
