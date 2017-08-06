@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19D36D451F36D8D000AD25E3 /* PDFImageConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 19D36D431F36D8D000AD25E3 /* PDFImageConverter.m */; };
 		22F8A00F1A6279030099DC69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8A00E1A6279030099DC69 /* main.m */; };
 		22F8A0121A6279030099DC69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8A0111A6279030099DC69 /* AppDelegate.m */; };
 		22F8A0151A6279030099DC69 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F8A0141A6279030099DC69 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19D36D431F36D8D000AD25E3 /* PDFImageConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDFImageConverter.m; sourceTree = "<group>"; };
+		19D36D441F36D8D000AD25E3 /* PDFImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDFImageConverter.h; sourceTree = "<group>"; };
 		22F8A0091A6279030099DC69 /* IPDFCameraViewControllerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IPDFCameraViewControllerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F8A00D1A6279030099DC69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22F8A00E1A6279030099DC69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 		22F8A0321A6279850099DC69 /* IPDFCameraViewController */ = {
 			isa = PBXGroup;
 			children = (
+				19D36D431F36D8D000AD25E3 /* PDFImageConverter.m */,
+				19D36D441F36D8D000AD25E3 /* PDFImageConverter.h */,
 				22F8A0331A62799E0099DC69 /* IPDFCameraViewController.h */,
 				22F8A0341A62799E0099DC69 /* IPDFCameraViewController.m */,
 			);
@@ -166,6 +171,7 @@
 			files = (
 				22F8A0351A62799E0099DC69 /* IPDFCameraViewController.m in Sources */,
 				22F8A0151A6279030099DC69 /* ViewController.m in Sources */,
+				19D36D451F36D8D000AD25E3 /* PDFImageConverter.m in Sources */,
 				22F8A0121A6279030099DC69 /* AppDelegate.m in Sources */,
 				22F8A00F1A6279030099DC69 /* main.m in Sources */,
 			);
